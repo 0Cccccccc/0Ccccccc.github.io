@@ -42,7 +42,9 @@ window.onload = async () => {
         };
 
         const localStream = await navigator.mediaDevices.getUserMedia({
-            video: true,
+            video: {
+                facingMode: 'environment',
+            },
             // audio: true,
         });
 
